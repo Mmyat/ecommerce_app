@@ -4,7 +4,7 @@ import { useStateContext } from "../context/ContextProvider";
 const Card = ({ productData }) => {
   const {dispatch} = useStateContext();
   return(
-    <div className="w-72 h-90 bg-white p-2 border-2 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105">
+    <div className="w-72 h-90 bg-white p-2 border-2 rounded-lg shadow-lg hover:shadow-xl">
       <div>
         <img className="rounded-t-lg m-auto w-[200px] h-[200px]" src={productData.image} alt="" />
       </div>
