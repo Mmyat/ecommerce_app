@@ -20,7 +20,7 @@ const Details = () => {
   }, [product,filterproducts]);
   return (
     <>
-      <div className="flex gap-5 items-start mx-7 my-20">
+      <div className="max-w-screen-xl flex flex-wrap items-center gap-5 items-start mx-7 my-20">
         <img
           src={product?.image}
           className="w-[250px] h-[370px] border-2 shadow-lg p-10"

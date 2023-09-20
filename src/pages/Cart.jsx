@@ -31,20 +31,20 @@ const Cart = () => {
   return (
     <>
       {cart.length > 0 ? (
-        <div className="grid grid-cols-4 mt-24">
+        <div className="max-w-screen-xl grid grid-cols-5 px-auto mt-24">
           <div className="col-span-3 flex flex-col gap-5">
             {cart?.map((item) => (
               <CartItem key={item.id} item={item} incresePrice={incresePrice} decresePrice={decresePrice} />
             ))}
           </div>
-          <div className="col-span-1">
-            <div className="bg-gray-50 p-10 rounded shadow-lg">
-              <h1 className="text-3xl text-info font-semibold">
+          <div className="col-span-2 mx-auto">
+            <div className="h-auto justify-center bg-gray-50 px-2 py-4 mx-auto border rounded shadow-lg">
+              <h1 className="text-2xl text-info font-semibold">
                 Total Price - ${total.toFixed(2)}
               </h1>
               <button
                 onClick={checkoutHandler}
-                className="px-5 py-2 bg-info text-primary rounded shadow-lg uppercase my-5"
+                className="px-2 py-2 bg-info text-primary rounded shadow-lg uppercase my-5"
               >
                 Checkout
               </button>
