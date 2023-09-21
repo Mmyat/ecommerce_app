@@ -24,8 +24,8 @@ const CartItem = ({ item, incresePrice, decresePrice }) => {
     dispatch({ type: "REMOVE_FROM_CART", payload: item });
   };
   return (
-    <div className="flex items-start mx-auto gap-4">
-      <img src={item?.image} className="h-32 border-2 rounded p-4" alt="" />
+    <div className="flex items-start p-2 gap-4">
+      <img src={item?.image} className="w-[150px] h-[150px] border-2 rounded p-4" alt="" />
       <div className="">
         <h3 className="text-2xl font-semibold">{item?.title}</h3>
         <p className="text-secondary text-3xl my-3">${item?.price * qty}</p>

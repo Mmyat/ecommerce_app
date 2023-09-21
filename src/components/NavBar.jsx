@@ -11,7 +11,7 @@ const NavBar = () => {
     <nav className="w-full flex flex-wrap items-center justify-between fixed top-0 left-0 right-0 bg-gray-300 px-2 py-2 mx-auto mb-3 shadow-md rounded-b-lg">
             <div className="flex items-center mx-auto">
               <SiShopify className="text-3xl mr-1" style={{color:"#ff8906"}}/>
-              <h1 className="navbar-brand font-semibold text-xl" style={{color:"#ff8906"}}>Shop</h1>
+              <h1 className="navbar-brand text-header font-semibold text-xl">Shop</h1>
             </div>
             <div className="flex items-center">
               <NavLink to={"/"} className="navbar-default" aria-current="page" href="#">
