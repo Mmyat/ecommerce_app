@@ -24,25 +24,25 @@ const CartItem = ({ item, incresePrice, decresePrice }) => {
     dispatch({ type: "REMOVE_FROM_CART", payload: item });
   };
   return (
-    <div className="flex items-start p-2 gap-4">
+    <div className="flex flex-col sm:flex-row w-full items-center bg-gray-50 px-auto px-1 sm:px-2 py-4 border rounded shadow-lg gap-4">
       <img src={item?.image} className="w-[150px] h-[150px] border-2 rounded p-4" alt="" />
       <div className="">
-        <h3 className="text-2xl font-semibold">{item?.title}</h3>
-        <p className="text-secondary text-3xl my-3">${item?.price * qty}</p>
-        <div className="flex items-center gap-3">
+        <h3 className="flex-wrap text-lg md:text-xl font-semibold">{item?.title}</h3>
+        <p className="text-secondary text-lg md:text-xl my-3">${item?.price * qty}</p>
+        <div className="flex items-center flex-wrap gap-3">
           <AiFillMinusSquare
             onClick={decreseQty}
-            className="text-3xl text-danger cursor-pointer"
+            className="text-xl md:text-2xl text-danger cursor-pointer"
           />
           <p className="tex-2xl">{qty}</p>
           <AiFillPlusSquare
             onClick={increseQty}
-            className="text-3xl text-info cursor-pointer"
+            className="text-xl md:text-2xl text-info cursor-pointer"
           />
 
           <AiFillDelete
             onClick={removeItemHandler}
-            className="text-danger text-2xl cursor-pointer"
+            className="text-danger text-xl md:text-2xl cursor-pointer"
           />
         </div>
       </div>

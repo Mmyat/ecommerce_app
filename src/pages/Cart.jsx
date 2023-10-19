@@ -32,26 +32,26 @@ const Cart = () => {
     <>
       {cart.length > 0 ? (
         <div className="max-w-screen-xl grid grid-cols-5 px-auto mt-24">
-          <div className="col-span-3 flex flex-col gap-5">
+          <div className="col-span-3 flex flex-col p-1 place-items-start gap-5">
             {cart?.map((item) => (
               <CartItem key={item.id} item={item} incresePrice={incresePrice} decresePrice={decresePrice} />
             ))}
           </div>
-          <div className="col-span-2 mx-auto">
-            <div className="h-auto justify-center bg-gray-50 px-2 py-4 mx-auto border rounded shadow-lg">
-              <h1 className="text-2xl text-info font-semibold">
+          <div className="col-span-2 mx-auto p-1">
+            <div className="h-auto w-full justify-center bg-gray-50 px-2 py-4 mx-auto border rounded shadow-lg">
+              <h1 className="text-lg md:text-xl text-info font-semibold">
                 Total Price - ${total.toFixed(2)}
               </h1>
               <button
                 onClick={checkoutHandler}
-                className="px-2 py-2 bg-info text-primary rounded shadow-lg uppercase my-5"
+                className="text-lg md:text-xl px-2 py-2 bg-info text-primary rounded shadow-lg uppercase my-5"
               >
                 Checkout
               </button>
             </div>
             <button
               onClick={() => dispatch({ type: "CART_EMPTY" })}
-              className="px-5 py-2 bg-danger text-primary rounded shadow-lg uppercase my-5"
+              className="text-lg md:text-xl px-1 py-2 bg-danger text-primary rounded shadow-lg uppercase my-5"
             >
               Cart empty
             </button>
@@ -59,7 +59,7 @@ const Cart = () => {
         </div>
       ) : (
         <div className="flex justify-center">
-          <div className="bg-secondary p-20 rounded shadow-lg mt-20 animate__animated animate__backInDown">
+          <div className="bg-[#078080] p-20 rounded-lg m-2 shadow-lg mt-20">
             <h1 className="text-4xl font-semibold tracking-wider my-5 text-primary">
               Your Cart is Empty
             </h1>

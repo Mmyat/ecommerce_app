@@ -5,7 +5,7 @@ const Success = () => {
     const navigate = useNavigate();
   return (
     <div className="flex justify-center">
-      <div className="bg-secondary p-20 rounded shadow-lg mt-20 animate__animated animate__backInDown">
+      <div className="bg-[#078080] p-20 rounded-lg m-2 shadow-lg mt-20">
         <h1 className="text-4xl font-semibold tracking-wider my-5 text-primary">
           Thanks For Purchasing
         </h1>
