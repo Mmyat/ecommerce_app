@@ -32,17 +32,17 @@ const CartItem = ({ item, incresePrice, decresePrice }) => {
         <div className="flex items-center flex-wrap gap-3">
           <AiFillMinusSquare
             onClick={decreseQty}
-            className="text-xl md:text-2xl text-danger cursor-pointer"
+            className="text-2xl md:text-3xl text-danger cursor-pointer"
           />
           <p className="tex-2xl">{qty}</p>
           <AiFillPlusSquare
             onClick={increseQty}
-            className="text-xl md:text-2xl text-info cursor-pointer"
+            className="text-2xl md:text-3xl text-info cursor-pointer"
           />
 
           <AiFillDelete
             onClick={removeItemHandler}
-            className="text-danger text-xl md:text-2xl cursor-pointer"
+            className="text-danger text-2xl md:text-3xl cursor-pointer"
           />
         </div>
       </div>
