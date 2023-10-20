@@ -4,12 +4,12 @@ import { useStateContext } from "../context/ContextProvider";
 const Card = ({ productData }) => {
   const {dispatch} = useStateContext();
   return(
-    <div className="w-72 h-auto bg-white p-2 border-2 rounded-lg shadow-lg hover:shadow-xl">
+    <div className="w-72 h-96 bg-gray-100 p-2 border-2 rounded-lg shadow-lg hover:shadow-xl">
       <div>
         <img className="rounded-t-lg m-auto w-[200px] h-[200px]" src={productData.image} alt="" />
       </div>
       <div class="p-5">
-        <h5 className="mb-2 text-lg md:text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+        <h5 className=" flex-wrap mb-2 text-md md:text-lg font-bold tracking-tight text-gray-900 dark:text-white">
           {productData?.title.substring(0,20)+"..."}
         </h5>
         <div className='flex justify-between'>
