@@ -42,7 +42,7 @@ const ContextProvider = ({children}) => {
     };
   const [state,dispatch] = useReducer(reducer,initialState)
   const getData=async()=>{
-    const dataList = await ApiService("products")
+    const dataList = await ApiService("api/items/")
     setProductList(dataList)
   }
   useEffect(() => {
@@ -51,7 +51,7 @@ const ContextProvider = ({children}) => {
   useEffect(()=>{
     dispatch({type : "Get_Products",payload : productList})
     const filterList = productList.filter((pd) =>
-    pd.title.toLowerCase().includes(search.toLocaleLowerCase())
+    pd.name.toLowerCase().includes(search.toLocaleLowerCase())
   );
     dispatch({type : "Get_Products",payload : filterList})
   },[productList, search])

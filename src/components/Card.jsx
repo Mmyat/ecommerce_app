@@ -6,17 +6,17 @@ const Card = ({ productData }) => {
   return(
     <div className="w-72 h-96 bg-gray-100 p-2 border-2 rounded-lg shadow-lg hover:shadow-xl">
       <div>
-        <img className="rounded-t-lg m-auto w-[200px] h-[200px]" src={productData.image} alt="" />
+        <img className="rounded-t-lg m-auto w-[200px] h-[200px]" src={productData.imagefile} alt="" />
       </div>
       <div class="p-5">
         <h5 className=" flex-wrap mb-2 text-md md:text-lg font-bold tracking-tight text-gray-900 dark:text-white">
-          {productData?.title.substring(0,20)+"..."}
+          {productData?.name.substring(0,20)+"..."}
         </h5>
         <div className='flex justify-between'>
           <h5 className="text-xl tracking-tight text-warn" >${productData?.price}</h5>
           <div className='flex items-center gap-1'>
             <AiFillStar className='text-danger text-xl' />
-            <small className='text-info text-xl font-semibold'>( {productData?.rating?.rate} )</small>
+            <small className='text-info text-xl font-semibold'>( {4.5} )</small>
           </div>
         </div>
       </div>
